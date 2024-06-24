@@ -15,28 +15,51 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <!-- Start Header Section -->
         <header class="header">
             <div class="container">
                 <nav class="navigation">
-                    <ul class="navigation-links">
-                        <li><a class="navigation-link" href="#">Bio</a></li>
-                        <li><a class="navigation-link" href="#">Skills</a></li>
-                        <li><a class="navigation-link" href="#">Media</a></li>
+                    <ul class="navigation__links">
+                        <li><a class="navigation__link" href="#">Bio</a></li>
+                        <li><a class="navigation__link" href="#">Skills</a></li>
+                        <li><a class="navigation__link" href="#">Media</a></li>
                         <li>
-                            <a class="navigation-link" href="#">Projects</a>
+                            <a class="navigation__link" href="#">Projects</a>
                         </li>
                         <li>
-                            <a class="navigation-link" href="#">My Clients</a>
+                            <a class="navigation__link" href="#">My Clients</a>
                         </li>
-                        <li><a class="navigation-link" href="#">Contact</a></li>
+                        <li><a class="navigation__link" href="#">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="toggle">
-                    <span class="toggle-title">Switch Theme</span>
-                    <input type="checkbox" name="toggle-input" id="toggle" class="toggle-input">
-                    <label for="toggle" class="toggle-label"></label>
+                    <span class="toggle__title">Switch Theme</span>
+                    <input type="checkbox" name="toggle-input" id="toggle" class="toggle__input">
+                    <label for="toggle" class="toggle__label"></label>
                 </div>
             </div>
         </header>
+        <!-- End Header Section -->
+
+        <!-- Start Bio Section -->
+        <section id="bio" class="bio">
+            <div class="container bio__container grid-section">
+                <div class="bio__infos">
+                    <h1 class="bio__heading">
+                        Hi There, I’M A Passionate Front-End Developer
+                    </h1>
+                    <p class="bio__details">
+                        My name is <span class="bio__name">Nureddin Haji</span>, Doctor of Medicine (M.D.), a Front-End Developer and a content creator who publish content on <a href="#" class="bio__facebook">Facebook</a>, <a href="#" class="bio__twitter">Twitter</a>, <a href="" class="bio__linkedin">LinkedIn</a> and <a href="#" class="bio__telegram">Telegram</a>.
+                    </p>
+                    <div class="bio__links">
+                        <a href="#" class="bio__link bio__link--say-hi">Say Hi</a>
+                        <a href="#" class="bio__link bio__link--download">Download CV <span class="bio_arrow">↓</span></a>
+                    </div>
+                </div>
+                <div class="bio_image">Profile Image</div>
+            </div>
+        </section>
+        <!-- End Bio Section -->
+
     </body>
 </html>

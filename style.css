@@ -92,21 +92,31 @@ body {
     justify-content: space-between;
 }
 
+/* Global Styles */
+
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: start;
+}
+
+/* End Global Styles */
+
 /* Header Style */
 
 .header {
     padding: 3rem 0;
     font-weight: var(--font-weight-medium);
     position: relative;
-    border: 0.1rem solid var(--color-input-border);
+    border-bottom: 0.1rem solid var(--color-input-border);
 }
 
-.navigation-links {
+.navigation__links {
     display: flex;
     gap: 2rem;
 }
 
-.navigation-link:hover, .navigation-link:active {
+.navigation__link:hover, .navigation__link:active {
     text-decoration: underline;
 }
 
@@ -117,16 +127,16 @@ body {
     gap: 1rem;
 }
 
-.toggle-title {
+.toggle__title {
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-18);
 }
 
-.toggle-input {
+.toggle__input {
     display: none;
 }
 
-.toggle-label {
+.toggle__label {
     width: 4.5rem;
     height: 2.2rem;
     background-color: var(--color-black);
@@ -138,7 +148,7 @@ body {
     cursor: pointer;
 }
 
-.toggle-label::after {
+.toggle__label::after {
     content: "";
     background-color: var(--color-white);
     border-radius: 50%;
@@ -148,11 +158,11 @@ body {
     display: block;
 }
 
-.toggle-input:checked + .toggle-label {
+.toggle__input:checked + .toggle__label {
     background-color: var(--color-white);
 }
 
-.toggle-input:checked + .toggle-label::after {
+.toggle__input:checked + .toggle__label::after {
     background-color: var(--color-black);
     transform: translateX(2.1rem);
 }
@@ -160,3 +170,58 @@ body {
 /* End Toggle */
 
 /* End Header Style */
+
+/* Start Bio Section Style */
+
+.bio__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7.4rem;
+}
+
+.bio__heading {
+    font-size: var(--font-size-70);
+    font-weight: var(--font-weight-bold);
+}
+
+.bio__details {
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-20);
+    margin: 3rem 0 8rem;
+}
+
+.bio__name {
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.bio__facebook {
+    color: var(--color-dark-blue);
+}
+
+.bio__twitter {
+    color: var(--color-light-blue);
+}
+
+.bio__linkedin {
+    color: var(--color-dark-blue);
+}
+
+.bio__telegram {
+    color: var(--color-dark-blue);
+}
+
+.bio__link {
+    font-size: 2.4rem;
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.bio__link--say-hi {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 0.7rem 4.7rem;
+}
+
+.bio__link--download {
+    padding: 0.7rem 0;
+}
+/* End Bio Section Style */
