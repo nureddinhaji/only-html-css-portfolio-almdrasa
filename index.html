@@ -17,11 +17,15 @@
     <body>
         <!-- Start Header Section -->
         <header class="header">
-            <div class="container">
+            <div class="container header__container">
                 <nav class="navigation">
                     <ul class="navigation__links">
-                        <li><a class="navigation__link" href="#">Bio</a></li>
-                        <li><a class="navigation__link" href="#">Skills</a></li>
+                        <li><a class="navigation__link" href="#bio">Bio</a></li>
+                        <li>
+                            <a class="navigation__link" href="#skills"
+                                >Skills</a
+                            >
+                        </li>
                         <li><a class="navigation__link" href="#">Media</a></li>
                         <li>
                             <a class="navigation__link" href="#">Projects</a>
@@ -29,12 +33,19 @@
                         <li>
                             <a class="navigation__link" href="#">My Clients</a>
                         </li>
-                        <li><a class="navigation__link" href="#">Contact</a></li>
+                        <li>
+                            <a class="navigation__link" href="#">Contact</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="toggle">
                     <span class="toggle__title">Switch Theme</span>
-                    <input type="checkbox" name="toggle-input" id="toggle" class="toggle__input">
+                    <input
+                        type="checkbox"
+                        name="toggle-input"
+                        id="toggle"
+                        class="toggle__input"
+                    />
                     <label for="toggle" class="toggle__label"></label>
                 </div>
             </div>
@@ -42,26 +53,241 @@
         <!-- End Header Section -->
 
         <!-- Start Bio Section -->
-        <section id="bio" class="bio">
+        <section id="bio" class="bio section">
             <div class="container bio__container grid-section">
                 <div class="bio__infos">
                     <h1 class="bio__heading">
                         Hi There, I’M A Passionate Front-End Developer
                     </h1>
                     <p class="bio__details">
-                        My name is <span class="bio__name">Nureddin Haji</span>, Doctor of Medicine (M.D.), a Front-End Developer and a content creator who publish content on <a href="#" class="bio__facebook">Facebook</a>, <a href="#" class="bio__twitter">Twitter</a>, <a href="" class="bio__linkedin">LinkedIn</a> and <a href="#" class="bio__telegram">Telegram</a>.
+                        My name is <span class="bio__name">Nureddin Haji</span>,
+                        Doctor of Medicine (M.D.), a Front-End Developer and a
+                        content creator who publish content on
+                        <a href="#" class="bio__facebook">Facebook</a>,
+                        <a href="#" class="bio__twitter">Twitter</a>,
+                        <a href="" class="bio__linkedin">LinkedIn</a> and
+                        <a href="#" class="bio__telegram">Telegram</a>.
                     </p>
                     <div class="bio__links">
-                        <a href="#" class="bio__link bio__link--say-hi">Say Hi</a>
-                        <a href="#" class="bio__link bio__link--download">Download CV <span class="bio__arrow">↓</span></a>
+                        <a href="#" class="bio__link bio__link--say-hi"
+                            >Say Hi</a
+                        >
+                        <a href="#" class="bio__link bio__link--download"
+                            >Download CV <span class="bio__arrow">↓</span></a
+                        >
                     </div>
                 </div>
                 <div class="bio__image">
-                    <img class="bio__avatar" src="images/avatar.png" alt="Doctor and Programmer Avatar">
+                    <img
+                        class="bio__avatar"
+                        src="images/avatar.png"
+                        alt="Doctor and Programmer Avatar"
+                    />
                 </div>
             </div>
         </section>
         <!-- End Bio Section -->
 
+        <!-- Start Skills Section -->
+        <section id="skills" class="skills section section--gray-background">
+            <div class="container">
+                <h2 class="section-heading">My Skills</h2>
+                <ul class="skills__list">
+                    <li class="skills__item">
+                        <div class="skills__content">
+                            <h3 class="skills__title">HTML</h3>
+                            <span class="skills__expertience">2 years</span>
+                        </div>
+                        <div class="skills__icon">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 108.3 122.9"
+                                style="enable-background: new 0 0 108.35 122.88"
+                                xml:space="preserve"
+                                class="skills__svg"
+                            >
+                                <path
+                                    d="m0 0 9.9 110.6L54 122.9l44.4-12.3L108.3 0H0zm71 63.6-1.6 17.6-15.2 4.1-15-4-1-10.9H24.6l1.9 21.3 27.8 7.7 27.8-7.7 3.7-41.6H36.4L35 36h52l1.1-13.5h-68l3.7 41h47zm19 40-35.6 9.8h-.2l-35.7-9.9L10.1 9h88.4L90 103.5z"
+                                    style="
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    "
+                                />
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="skills__item">
+                        <div class="skills__content">
+                            <h3 class="skills__title">CSS</h3>
+                            <span class="skills__expertience">2 years</span>
+                        </div>
+                        <div class="skills__icon">
+                            <svg
+                                class="skills__svg"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 122.9 111.2"
+                                style="enable-background: new 0 0 122.88 111.23"
+                                xml:space="preserve"
+                            >
+                                <path
+                                    style="
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    "
+                                    d="m18 0-4 21h84l-2 13H11L7 55h84l-4 23-34 11-29-11 2-10H5L0 93l49 18 55-18 19-93H18z"
+                                />
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="skills__item">
+                        <div class="skills__content">
+                            <h3 class="skills__title">SASS</h3>
+                            <span class="skills__expertience">1 years</span>
+                        </div>
+                        <div class="skills__icon">
+                            <svg
+                                class="skills__svg"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 122.9 92.1"
+                                style="enable-background: new 0 0 122.88 92.11"
+                                xml:space="preserve"
+                            >
+                                <path
+                                    d="M105.8 52.9c-4.3 0-8 1-11.2 2.6-1.1-2.3-2.3-4.3-2.5-5.8C92 48 91.7 47 92 45c.3-2 1.5-5 1.5-5.3 0-.2-.3-1.2-2.8-1.3-2.4 0-4.6.5-4.8 1.2-.2.6-.7 2.1-1 3.6-.5 2.3-5 10.3-7.5 14.5-.9-1.6-1.6-3-1.7-4.2-.3-1.8-.5-2.8-.3-4.9.3-2 1.5-5 1.5-5.2 0-.2-.3-1.3-2.8-1.3-2.4 0-4.6.5-4.8 1.1l-1 3.7c-.5 1.5-6.5 14.8-8 18.3l-2 4.2c-.6 1-.1 0-.2.1l-.6 1.3c-.4.6-.7 1.2-.9 1.2-.1 0-.3-1.6 0-3.8 1-4.7 3.1-11.9 3-12.1 0-.2.5-1.4-1.3-2-1.8-.7-2.4.3-2.5.3l-.3.4s2-8.1-3.7-8.1c-3.6 0-8.5 3.8-10.9 7.4l-8.2 4.5-4 2.2-.3-.3C21.5 53 8.8 47.9 9.3 38c.2-3.6 1.4-13 24.4-24.5 18.8-9.3 33.8-6.8 36.4-1 3.8 8.1-8 23.3-27.5 25.5-7.5.8-11.4-2-12.4-3.2-1-1-1.2-1.1-1.5-1-.7.4-.3 1.4 0 2 .5 1.5 3 4.2 7 5.6a37.4 37.4 0 0 0 22.9-2.3c11.8-4.6 21-17.3 18.4-28C74.2.5 56.2-3 39.3 3a85.4 85.4 0 0 0-29 16.6C1 28.2-.4 36 .2 39c2.2 11.3 17.8 18.7 24 24.2l-.8.4c-3.2 1.6-15 7.8-18 14.4-3.4 7.4.5 12.8 3.1 13.5 8 2.2 16.2-1.8 20.7-8.4a20.7 20.7 0 0 0 1.8-19v-.2l2.4-1.4 4.5-2.6c-.8 2.1-1.3 4.6-1.6 8.2-.3 4.2 1.4 9.7 3.7 11.8 1 1 2.2 1 3 1 2.6 0 3.8-2.2 5-4.8 1.7-3.2 3.2-6.9 3.2-6.9s-1.8 10 3 10c1.9 0 3.7-2.3 4.5-3.5l.1-.2.3-.5c.7-1.3 2.4-4.1 4.8-8.9 3-6 6-13.7 6-13.7s.3 1.9 1.2 5c.5 1.8 1.7 3.8 2.6 5.7l-1.2 1.6c-.5.8-1.2 1.6-1.9 2.4-2.4 3-5.3 6.3-5.7 7.2-.5 1.1-.4 2 .5 2.7.7.4 1.8.5 3 .4 2.2-.1 3.8-.7 4.5-1 1.2-.4 2.6-1 4-2a8.7 8.7 0 0 0 3.6-7.7c0-1.8-.6-3.7-1.4-5.4l.7-1c3.8-5.5 6.7-11.6 6.7-11.6s.3 1.9 1.2 5c.4 1.5 1.3 3.2 2.2 4.9a21.3 21.3 0 0 0-6.6 8.5c-1.4 4-.3 5.9 1.8 6.3 1 .2 2.3-.2 3.3-.7 1.2-.4 2.7-1 4.1-2.1 2.4-1.8 4.7-4.2 4.6-7.6 0-1.5-.5-3-1-4.5 3-1.2 7-2 11.9-1.3 10.7 1.2 12.8 7.9 12.4 10.7a7.2 7.2 0 0 1-3.4 4.8c-.7.4-1 .6-1 1 .2.4.5.4 1.2.3.9-.1 5.6-2.3 5.8-7.4.3-6.6-6-13.8-17.1-13.7zM23.4 80.7c-3.5 3.8-8.5 5.3-10.6 4-2.3-1.3-1.4-7 3-11 2.6-2.6 6-4.9 8.3-6.3l2.2-1.3.2-.1.5-.4c1.7 5.9.1 11-3.6 15zM49.2 63c-1.2 3-3.8 10.7-5.4 10.3-1.3-.4-2.1-6.2-.2-12 1-2.9 3-6.3 4.2-7.7 2-2.1 4-2.8 4.6-2 .6 1.2-2.4 9.5-3.2 11.4zm21.3 10.2c-.5.3-1 .5-1.2.3-.2-.1.2-.5.2-.5l3.7-4.1 2.1-2.7v.3c0 3.5-3.3 5.8-4.8 6.7zm16.4-3.8c-.4-.2-.3-1.1 1-4 .5-1 1.6-2.9 3.6-4.6.3.7.4 1.4.4 2 0 4.4-3.1 6-5 6.6z"
+                                    style="
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    "
+                                />
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="skills__item">
+                        <div class="skills__content">
+                            <h3 class="skills__title">Javascript</h3>
+                            <span class="skills__expertience">2 years</span>
+                        </div>
+                        <div class="skills__icon">
+                            <svg
+                                class="skills__svg"
+                                data-name="Layer 1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                            >
+                                <path
+                                    d="M311 1373V861h512v512Zm304-89c5 7 8 13 13 18l11 10a109 109 0 0 0 99 16c16-6 30-15 38-31 8-14 8-29 6-45a59 59 0 0 0-17-35c-12-11-27-18-41-25l-36-17c-12-7-14-26-3-35 8-6 17-5 26-3 10 2 15 11 21 19l37-24c-9-16-21-28-38-34a87 87 0 0 0-50-3c-19 5-34 14-43 32-8 14-9 29-7 44a60 60 0 0 0 14 30c11 13 26 21 42 28 12 6 25 11 37 18 16 10 15 30-1 38s-32 7-48-2c-7-5-13-12-18-19-1-2-3-3-5-1l-37 21Zm-169 5c7 15 17 27 32 35 21 11 43 11 66 5a58 58 0 0 0 28-16c13-14 18-32 18-50v-167h-49v169c0 7-1 15-7 20-11 7-28 7-38-3l-12-17Z"
+                                    transform="translate(-311 -861)"
+                                />
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="skills__item">
+                        <div class="skills__content">
+                            <h3 class="skills__title">React</h3>
+                            <span class="skills__expertience">0 years</span>
+                        </div>
+                        <div class="skills__icon">
+                            <svg
+                                class="skills__svg"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 122.9 109.4"
+                                style="enable-background: new 0 0 122.88 109.43"
+                                xml:space="preserve"
+                            >
+                                <path
+                                    d="M122.9 54.7c0-8.1-10.2-15.8-25.8-20.6 3.6-16 2-28.6-5.1-32.7A11 11 0 0 0 86.4 0v5.6c1.1 0 2 .2 2.8.7 3.5 2 5 9.4 3.8 19-.3 2.3-.7 4.8-1.3 7.3-5-1.2-10.3-2.1-15.9-2.7-3.4-4.7-6.9-8.9-10.4-12.6 8.1-7.6 15.8-11.7 21-11.7V0c-6.9 0-15.9 5-25 13.4C52.3 5 43.3.1 36.4.1v5.6c5.1 0 12.8 4.1 21 11.7a117 117 0 0 0-10.3 12.5c-5.7.6-11 1.5-16 2.7-.5-2.5-1-5-1.3-7.3-1.1-9.5.3-17 3.7-19 .7-.4 1.7-.6 2.9-.6V.1c-2.1 0-4 .5-5.7 1.4-7 4-8.6 16.7-5 32.6C10.1 39 0 46.6 0 54.7 0 63 10.2 70.6 25.8 75.4c-3.6 15.9-2 28.6 5 32.6a11 11 0 0 0 5.7 1.4c7 0 16-4.9 25-13.4 9.2 8.5 18.2 13.3 25 13.3 2.2 0 4-.4 5.7-1.4 7-4 8.6-16.7 5-32.6 15.5-4.7 25.7-12.5 25.7-20.6zm-50 0a11.4 11.4 0 1 0-23 0 11.4 11.4 0 0 0 23 0zM36.3.1zm54 38c-1 3.2-2.1 6.5-3.4 9.8A118.7 118.7 0 0 0 80 36c3.6.6 7 1.2 10.3 2zM78.8 64.6c-2 3.4-4 6.6-6 9.6a128.5 128.5 0 0 1-22.6 0 135.3 135.3 0 0 1-11.3-19.5 131.6 131.6 0 0 1 11.2-19.6 128.5 128.5 0 0 1 22.6 0A135.3 135.3 0 0 1 84 54.7c-1.6 3.4-3.3 6.7-5.2 10zm8-3.3c1.4 3.4 2.6 6.7 3.6 10a111 111 0 0 1-10.4 2 144.1 144.1 0 0 0 6.9-12zM61.6 88.2c-2.3-2.4-4.7-5.1-7-8a155.2 155.2 0 0 0 13.9 0 99 99 0 0 1-7 8zM42.9 73.4c-3.6-.5-7-1.2-10.3-2 1-3.2 2-6.5 3.4-9.9a118.7 118.7 0 0 0 6.9 12zm18.5-52.1c2.3 2.4 4.6 5 7 8a155.2 155.2 0 0 0-14 0 99 99 0 0 1 7-8zM42.8 36A144.1 144.1 0 0 0 36 48c-1.4-3.4-2.5-6.7-3.5-10 3.3-.8 6.8-1.4 10.3-2zM20.2 67.4c-9-3.8-14.6-8.7-14.6-12.7 0-3.9 5.7-8.9 14.6-12.6 2.1-1 4.5-1.8 6.9-2.6 1.4 5 3.3 10 5.6 15.3C30.4 60 28.6 65 27.2 70c-2.5-.8-4.9-1.7-7-2.6zm13.4 35.8c-3.4-2-4.8-9.4-3.7-19 .3-2.3.7-4.8 1.3-7.3C36 78 41.5 79 47 79.6c3.4 4.6 6.9 8.8 10.4 12.5-8.2 7.6-15.8 11.8-21 11.8a6 6 0 0 1-2.9-.7zm59.4-19c1.2 9.5-.2 17-3.6 18.9-.8.5-1.7.7-2.9.7-5.2 0-12.9-4.2-21-11.7 3.5-3.7 7-7.9 10.3-12.5 5.7-.6 11-1.5 16-2.8.5 2.5 1 5 1.3 7.3zm9.7-16.8c-2.2 1-4.5 1.8-7 2.5-1.4-4.9-3.3-10-5.6-15.2 2.3-5.2 4.2-10.3 5.6-15.2 2.4.8 4.8 1.6 7 2.6 8.9 3.7 14.6 8.7 14.6 12.6 0 4-5.7 9-14.6 12.7z"
+                                    style="
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    "
+                                />
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="skills__item">
+                        <div class="skills__content">
+                            <h3 class="skills__title">Firebase</h3>
+                            <span class="skills__expertience">2 years</span>
+                        </div>
+                        <div class="skills__icon">
+                            <svg
+                                class="skills__svg"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 95.4 131.1"
+                                style="enable-background: new 0 0 95.39 131.07"
+                                xml:space="preserve"
+                            >
+                                <path
+                                    d="M0 106 16 3a3 3 0 0 1 6-1l16 31 7-13 3-2 2 2 45 86H0z"
+                                    style="fill: #363636"
+                                />
+                                <path
+                                    d="M56 66 38 33 0 106l56-40z"
+                                    style="fill: #1b1b1b"
+                                />
+                                <path
+                                    d="M95 106 83 29a3 3 0 0 0-5-1L0 106l43 24h9l43-24z"
+                                />
+                                <path
+                                    d="M83 29a3 3 0 0 0-5-1L63 43 50 20l-2-2-3 2-7 13L22 2a3 3 0 0 0-6 1L0 106l78-78a3 3 0 0 1 5 2l12 76-12-77zM0 106 16 3c0-1 1-2 3-2l3 1 16 31 7-12 3-2 2 2 12 22-62 63z"
+                                    style="fill: #fff; fill-opacity: 0.2"
+                                />
+                                <path
+                                    d="M52 129c-3 2-6 2-9 0L0 105v1l43 24h9l43-24v-1l-43 24z"
+                                    style="
+                                        opacity: 0.2;
+                                        fill: #a52714;
+                                        enable-background: new;
+                                    "
+                                />
+                                <linearGradient
+                                    id="a"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="-243.5"
+                                    y1="345.3"
+                                    x2="-242.4"
+                                    y2="344.5"
+                                    gradientTransform="matrix(95 0 0 -130.9998 23127 45254)"
+                                >
+                                    <stop
+                                        offset="0"
+                                        style="
+                                            stop-color: #fff;
+                                            stop-opacity: 0.1;
+                                        "
+                                    />
+                                    <stop
+                                        offset=".1"
+                                        style="
+                                            stop-color: #fff;
+                                            stop-opacity: 0.08;
+                                        "
+                                    />
+                                    <stop
+                                        offset=".6"
+                                        style="
+                                            stop-color: #fff;
+                                            stop-opacity: 0.02;
+                                        "
+                                    />
+                                    <stop
+                                        offset="1"
+                                        style="
+                                            stop-color: #fff;
+                                            stop-opacity: 0;
+                                        "
+                                    />
+                                </linearGradient>
+                                <path
+                                    d="m83 29-2-2-3 1-16 15-12-23a3 3 0 0 0-5 0l-7 13L22 2a3 3 0 0 0-6 1L0 106l43 24h9l43-24-12-77z"
+                                    style="fill: url(#a)"
+                                />
+                            </svg>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- End Skills Section -->
     </body>
 </html>
