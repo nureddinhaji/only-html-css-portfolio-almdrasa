@@ -84,6 +84,8 @@ body {
     font-family: var(--font-family-raleway);
     background-color: var(--color-background);
     color: var(--color-text);
+    display: grid;
+    gap: 11rem;
 }
 .container {
     margin: 0 auto;
@@ -174,8 +176,8 @@ body {
 /* Start Bio Section Style */
 
 .bio__container {
-    grid-template-columns: repeat(2, 1fr);
     gap: 7.4rem;
+    align-items: center;
 }
 
 .bio__heading {
@@ -242,9 +244,13 @@ body {
     }
 }
 
-.bio_arrow {
+.bio__arrow {
     display: inline-block;
     animation: arrow-animation 1s infinite alternate ease-in-out;
+}
+
+.bio__avatar {
+    width: 42.7rem;
 }
 
 /* End Bio Section Style */
