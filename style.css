@@ -224,4 +224,27 @@ body {
 .bio__link--download {
     padding: 0.7rem 0;
 }
+
+/* Animation Arrow */
+
+@keyframes arrow-animation {
+    0% {
+        transform: translateY(0.5rem);
+    }
+    35% {
+        transform: translateY(-0.5rem);
+    }
+    70% {
+        transform: translateY(0rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+.bio_arrow {
+    display: inline-block;
+    animation: arrow-animation 1s infinite alternate ease-in-out;
+}
+
 /* End Bio Section Style */
