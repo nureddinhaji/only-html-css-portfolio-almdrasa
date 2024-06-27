@@ -4,6 +4,8 @@
     padding: 0;
     margin: 0;
     font: inherit;
+    border: none;
+    outline: 0;
 }
 
 *,
@@ -20,9 +22,7 @@ a {
 
 button {
     background-color: transparent;
-    border: none;
     cursor: pointer;
-    outline: none;
 }
 
 ul,
@@ -102,7 +102,7 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: calc(var(--container-width) - (var(--gutter) * 2));
+    max-width: calc(var(--container-width) + var(--gutter) * 2);
     padding: 0 var(--gutter);
 }
 .section {
@@ -125,7 +125,9 @@ body {
     margin-inline-start: 1rem;
     position: relative;
 }
-
+.section-heading--colspan2 {
+    grid-column: span 2;
+}
 .section-heading::before {
     content: "";
     width: 0.5rem;
@@ -516,3 +518,84 @@ body {
     font-weight: var(--font-weight-semi-bold);
 }
 /* End Clients Section Style */
+
+/* Start Contact Section Style */
+.contact__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    align-items: center;
+}
+.contact__method {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contact__socials {
+    display: flex;
+    gap: 1rem;
+}
+.contact__me {
+    font-size: 2rem;
+    line-height: 1.6;
+}
+.contnact_email {
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-semi-bold);
+}
+.contact__social {
+    width: 25px;
+    height: 25px;
+    transition: var(--transition-timing);
+}
+.contact__social:hover {
+    transform: scale(1.2);
+}
+.contact__svg {
+    fill: var(--color-black);
+    width: 100%;
+    height: 100%;
+    transition: var(--transition-timing);
+}
+.contact__social:hover .contact__svg {
+    fill: var(--color-dark-green);
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.contact__infos {
+    display: flex;
+    gap: 1rem;
+}
+.contact__input {
+    flex: 1;
+    padding: 1rem;
+    background-color: #fff6;
+    border-bottom: 1px solid var(--color-green);
+}
+.contact__textarea {
+    padding: 1rem;
+    min-height: 13rem;
+    resize: vertical;
+    background-color: #fff6;
+    border-bottom: 1px solid var(--color-green);
+}
+.contact__sbmit {
+    background-color: var(--color-green);
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: var(--font-weight-semi-bold);
+    opacity: 0.8;
+    transition: var(--transition-timing);
+}
+.contact__sbmit:hover {
+    opacity: 1;
+}
+
+.contact__input:focus::placeholder,
+.contact__textarea:focus::placeholder {
+    visibility: hidden;
+}
+/* End Contact Section Style */
