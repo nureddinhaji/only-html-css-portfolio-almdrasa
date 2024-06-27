@@ -16,7 +16,7 @@
     </head>
     <body>
         <video class="background-video" autoplay loop muted>
-            <source src="videos/background.mp4" type="video/mp4">
+            <source src="videos/background.mp4" type="video/mp4" />
         </video>
         <!-- Start Header Section -->
         <header class="header">
@@ -34,7 +34,7 @@
                             <a class="navigation__link" href="#">Projects</a>
                         </li>
                         <li>
-                            <a class="navigation__link" href="#">My Clients</a>
+                            <a class="navigation__link" href="#clients">My Clients</a>
                         </li>
                         <li>
                             <a class="navigation__link" href="#">Contact</a>
@@ -296,9 +296,130 @@
         <!-- Start Projects Section -->
         <section id="projects" class="projects section">
             <div class="container projects__container">
-                <h2 class="section-heading">My Featured <br> Projects</h2>
+                <h2 class="section-heading">
+                    My Featured <br />
+                    Projects
+                </h2>
             </div>
         </section>
         <!-- End Projects Section -->
+
+        <!-- Start Clients Section -->
+        <section id="clients" class="clients section section--gray-background">
+            <div class="container clients__container">
+                <h2 class="section-heading">
+                    What MY <br />
+                    Clients Says
+                </h2>
+                <input
+                    class="carousel__btn"
+                    type="radio"
+                    name="carousel-control"
+                    id="carousel__btn1"
+                    hidden
+                />
+                <input
+                    class="carousel__btn"
+                    type="radio"
+                    name="carousel-control"
+                    id="carousel__btn2"
+                    hidden
+                />
+                <input
+                    class="carousel__btn"
+                    type="radio"
+                    name="carousel-control"
+                    id="carousel__btn3"
+                    hidden
+                />
+                <div class="carousel">
+                    <div class="clients__comments">
+                        <div class="clients__comment">
+                            <h3 class="clients__comment-heading">Test Title 1</h3>
+                            <p class="clients__comment-body">
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Veritatis rerum, nostrum
+                                corrupti labore vel perferendis, iste voluptate
+                                sapiente magnam harum eos maiores architecto.
+                                Ipsam corrupti, porro ab odit officiis esse, qui
+                                corporis alias possimus similique laboriosam
+                                temporibus facere consequuntur nulla blanditiis
+                                rem nobis dolore ducimus provident doloribus
+                                iste quaerat vero.
+                            </p>
+                            <div class="clients__details">
+                                <img src="images/client-avatar.webp" alt="Client Avatar" class="clients__avatar">
+                                <div class="clients__bio">
+                                    <h4 class="clients__name">Eng. Muhammed Ahmed</h4>
+                                    <p class="clients__work">Front-End Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clients__comment">
+                            <h3 class="clients__comment-heading">Test Title 2</h3>
+                            <p class="clients__comment-body">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Accusantium, assumenda!
+                                Nesciunt non dolorem deleniti natus nemo cum
+                                quos obcaecati optio saepe quae voluptas odit
+                                nulla beatae ducimus incidunt architecto autem
+                                eum illum, accusamus porro enim. Asperiores
+                                explicabo fugit at tenetur velit accusantium
+                                aperiam doloremque sapiente nesciunt veniam
+                                delectus, distinctio quae.
+                            </p>
+                            <div class="clients__details">
+                                <img src="images/client-avatar.webp" alt="Client Avatar" class="clients__avatar">
+                                <div class="clients__bio">
+                                    <h4 class="clients__name">Eng. Muhammed Ahmed</h4>
+                                    <p class="clients__work">Front-End Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clients__comment">
+                            <h3 class="clients__comment-heading">Test Title 3</h3>
+                            <p class="clients__comment-body">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Debitis corporis obcaecati
+                                dolor dicta soluta, expedita id delectus!
+                                Necessitatibus autem sequi iure fugit voluptate
+                                accusantium officiis distinctio mollitia
+                                obcaecati! Accusamus sapiente labore maiores,
+                                placeat totam inventore quia voluptatem possimus
+                                architecto velit ex, aut laudantium explicabo
+                                impedit quam quidem nobis commodi praesentium?
+                            </p>
+                            <div class="clients__details">
+                                <img src="images/client-avatar.webp" alt="Client Avatar" class="clients__avatar">
+                                <div class="clients__bio">
+                                    <h4 class="clients__name">Eng. Muhammed Ahmed</h4>
+                                    <p class="clients__work">Front-End Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel__control">
+                        <label
+                            for="carousel__btn1"
+                            id="carousel__nav1"
+                            class="carousel__nav"
+                        ></label>
+
+                        <label
+                            for="carousel__btn2"
+                            id="carousel__nav2"
+                            class="carousel__nav"
+                        ></label>
+
+                        <label
+                            for="carousel__btn3"
+                            id="carousel__nav3"
+                            class="carousel__nav"
+                        ></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Clients Section -->
     </body>
 </html>
