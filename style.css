@@ -67,19 +67,16 @@ html {
     --font-weight-semi-bold: 600;
     --font-weight-bold: 700;
 
-    --font-size-70: 7rem;
-    --font-size-65: 6.5rem;
-    --font-size-40: 4rem;
-    --font-size-38: 3.8rem;
-    --font-size-24: 2.4rem;
-    --font-size-22: 2.2rem;
-    --font-size-20: 2rem;
-    --font-size-18: 1.8rem;
-    --font-size-15: 1.5rem;
-
     --transition-timing: 0.3s;
 }
-
+html:has(.toggle__input:checked) {
+    --color-background: var(--color-black);
+    --color-text: var(--color-white);
+    --color-box-img: var(--color-green);
+    --color-link-bg: var(--color-green);
+    --color-gray: #080808;
+    --color-input-border: var(--color-white);
+}  
 /* End Variables */
 
 body {
@@ -119,7 +116,7 @@ body {
 }
 
 .section-heading {
-    font-size: var(--font-size-65);
+    font-size: 6.5rem;
     font-weight: var(--font-weight-bold);
     margin-bottom: 8.7rem;
     margin-inline-start: 1rem;
@@ -145,9 +142,11 @@ body {
 .header {
     padding: 3rem 0;
     font-weight: var(--font-weight-medium);
-    position: relative;
+    position: sticky;
     border-bottom: 0.1rem solid var(--color-input-border);
     background-color: var(--color-background);
+    top: 0;
+    z-index: 2;
 }
 
 .header__container {
@@ -169,6 +168,17 @@ body {
     color: var(--color-green);
 }
 
+body:has(#bio:target) .navigation__bio,
+body:has(#skills:target) .navigation__skills,
+body:has(#projects:target) .navigation__projects,
+body:has(#clients:target) .navigation__clients,
+body:has(#contact:target) .navigation__contact {
+    color: var(--color-dark-green);
+    font-weight: var(--font-weight-bold);
+    text-decoration: underline;
+
+}
+
 /* Start Toggle */
 
 .toggle {
@@ -178,7 +188,7 @@ body {
 
 .toggle__title {
     font-weight: var(--font-weight-medium);
-    font-size: var(--font-size-18);
+    font-size: 1.8rem;
 }
 
 .toggle__input {
@@ -221,21 +231,23 @@ body {
 /* End Header Style */
 
 /* Start Bio Section Style */
-
+.bio {
+    min-height: calc(100vh - 8rem);
+    display: flex;
+}
 .bio__container {
     gap: 7.4rem;
     align-items: center;
+    height: 100%;
 }
-
 .bio__heading {
-    font-size: var(--font-size-70);
+    font-size: 7rem;
     font-weight: var(--font-weight-bold);
 }
-
 .bio__details {
     font-family: var(--font-family-poppins);
     font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-20);
+    font-size: 2rem;
     margin: 3rem 0 8rem;
 }
 
@@ -258,7 +270,10 @@ body {
 .bio__telegram {
     color: var(--color-dark-blue);
 }
-
+.bio__links {
+    display: flex;
+    gap: 2rem;
+}
 .bio__link {
     font-size: 2.4rem;
     font-weight: var(--font-weight-semi-bold);
@@ -315,7 +330,7 @@ body {
     justify-content: space-between;
     gap: 1rem;
     padding: 20px;
-    background-color: hsl(0deg 0% 91.49%);
+    background-color: #b9b9b94a;
     border-radius: 1.5rem;
     transition: var(--transition-timing);
     user-select: none;
@@ -325,12 +340,12 @@ body {
     background: var(--color-green);
 }
 .skills__title {
-    font-size: var(--font-size-38);
+    font-size: 3.8rem;
     font-weight: var(--font-weight-semi-bold);
 }
 .skills__expertience {
     display: inline-block;
-    font-size: var(--font-size-20);
+    font-size: 2rem;
 }
 .skills__icon {
     display: flex;
@@ -419,13 +434,13 @@ body {
     animation-play-state: running;
 }
 .clients__comments .clients__comment:nth-child(1) {
-    background-color: #92d1d980;
+    background-color: #92d1d94a;
 }
 .clients__comments .clients__comment:nth-child(2) {
-    background-color: #d5efe0;
+    background-color: #d992994a;
 }
 .clients__comments .clients__comment:nth-child(3) {
-    background-color: #efd5e6;
+    background-color: #c5d9924a;
 }
 .clients__comment {
     flex: 1 0 100%;
@@ -541,6 +556,10 @@ body {
 .contnact_email {
     font-size: 1.8rem;
     font-weight: var(--font-weight-semi-bold);
+    transition: var(--transition-timing);
+}
+.contnact_email:hover {
+    color: var(--color-dark-green);
 }
 .contact__social {
     width: 25px;
@@ -574,6 +593,7 @@ body {
     padding: 1rem;
     background-color: #fff6;
     border-bottom: 1px solid var(--color-green);
+    transition: var(--transition-timing);
 }
 .contact__textarea {
     padding: 1rem;
@@ -581,6 +601,10 @@ body {
     resize: vertical;
     background-color: #fff6;
     border-bottom: 1px solid var(--color-green);
+}
+.contact__input:focus,
+.contact__textarea:focus {
+    border-bottom: 1px solid var(--color-dark-green);
 }
 .contact__sbmit {
     background-color: var(--color-green);
@@ -599,3 +623,19 @@ body {
     visibility: hidden;
 }
 /* End Contact Section Style */
+
+/* Start Footer Style */
+.footer {
+    padding: 2rem 0;
+}
+.footer__content {
+    text-align: center;
+    font-weight: var(--font-weight-medium);
+}
+.footer__name {
+    color: var(--color-dark-green);
+    font-weight: var(--font-weight-bold);
+}
+/* End Footer Style */
+
+
