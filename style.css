@@ -76,6 +76,7 @@ html:has(.toggle__input:checked) {
     --color-link-bg: var(--color-green);
     --color-gray: #080808;
     --color-input-border: var(--color-white);
+    --color-green: var(--color-dark-green);
 }  
 /* End Variables */
 
@@ -167,7 +168,7 @@ body {
     width: 4.5rem;
     height: 0.3rem;
     display: inline-block;
-    background-color: var(--color-black);
+    background-color: var(--color-text);
     transition: var(--transition-timing);
 }
 .header:has(.burger-menu__input:checked) .burger-menu__line:nth-of-type(1) {
@@ -308,8 +309,8 @@ body:has(#contact:target) .navigation__contact {
 }
 
 .bio__link--say-hi {
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background-color: var(--color-text);
+    color: var(--color-background);
     padding: 0.7rem 4.7rem;
 }
 
@@ -402,6 +403,7 @@ body:has(#contact:target) .navigation__contact {
     border-radius: 4rem;
     overflow: hidden;
     transition: var(--transition-timing);
+    aspect-ratio: 4/3;
 }
 .projects__cover:hover {
     transform: scale(1.05);
@@ -457,6 +459,12 @@ body:has(#contact:target) .navigation__contact {
     font-size: 2rem;
     line-height: 1.6;
 }
+.projects__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 .projects__link {
     font-size: 2rem;
     font-weight: var(--font-weight-medium);
@@ -464,6 +472,11 @@ body:has(#contact:target) .navigation__contact {
     background-color: var(--color-green);
     border-radius: 1rem;
     cursor: pointer;
+    transition: var(--transition-timing);
+    opacity: 0.8;
+}
+.projects__link:hover {
+    opacity: 1;
 }
 /* End Projects Section Style */
 
@@ -727,7 +740,11 @@ body:has(#contact:target) .navigation__contact {
 .contact__sbmit:hover {
     opacity: 1;
 }
-
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+    color: var(--color-text);
+    opacity: 0.8;
+}
 .contact__input:focus::placeholder,
 .contact__textarea:focus::placeholder {
     visibility: hidden;
@@ -755,6 +772,36 @@ body:has(#contact:target) .navigation__contact {
     }
 }
 @media all and (max-width:800px) {
+    .burger-menu {
+        display: grid;
+    }
+    .navigation {
+        /* display: none; */
+        position: absolute;
+        top: 100%;
+        padding: 2rem;
+        background-color: var(--color-background);
+        width: 100%;
+        inset-inline-start: 0;
+        transform: translateY(-100%);
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition-timing);
+    }
+    .navigation__links {
+        flex-direction: column;
+    }
+    .navigation__link {
+        padding: 1rem;
+        width: 100%;
+        font-size: 2.5rem;
+    }
+    .header:has(.burger-menu__input:checked) .navigation {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
     .section {
         padding: 7rem 0;
     }
@@ -793,36 +840,6 @@ body:has(#contact:target) .navigation__contact {
     }
 }
 @media all and (max-width:500px) {
-    .burger-menu {
-        display: grid;
-    }
-    .navigation {
-        /* display: none; */
-        position: absolute;
-        top: 100%;
-        padding: 2rem;
-        background-color: var(--color-background);
-        width: 100%;
-        inset-inline-start: 0;
-        transform: translateY(-100%);
-        z-index: -1;
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition-timing);
-    }
-    .navigation__links {
-        flex-direction: column;
-    }
-    .navigation__link {
-        padding: 1rem;
-        width: 100%;
-        font-size: 2.5rem;
-    }
-    .header:has(.burger-menu__input:checked) .navigation {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
     .skills__item {
         flex-direction: column;
     }
@@ -831,6 +848,9 @@ body:has(#contact:target) .navigation__contact {
     }
     .skills__icon {
         order: -1;
+    }
+    .contact__infos {
+        flex-direction: column;
     }
 }
 @media all and (max-width:450px) {
