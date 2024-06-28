@@ -1,10 +1,11 @@
+@use "./variables" as *;
 html {
     font-size: 10px;
     scroll-behavior: smooth;
 }
 body {
     font-size: 1.6rem;
-    font-family: var(--font-family-raleway);
+    font-family: "Raleway", sans-serif;;
     background-color: var(--color-background);
     color: var(--color-text);
 }
@@ -21,8 +22,8 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: calc(var(--container-width) + var(--gutter) * 2);
-    padding: 0 var(--gutter);
+    max-width: calc($container-width + $gutter * 2);
+    padding: 0 $gutter;
 }
 .section {
     padding: 11rem 0;
@@ -45,7 +46,7 @@ body {
 
 .section-heading {
     font-size: 6.5rem;
-    font-weight: var(--font-weight-bold);
+    font-weight: $bold;
     margin-inline-start: 1rem;
     position: relative;
 }

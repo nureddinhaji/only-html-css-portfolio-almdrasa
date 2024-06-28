@@ -1,5 +1,5 @@
 @use "./sass/reset";
-@use "./sass/variables";
+@use "./sass/variables" as *;
 @use "./sass/global";
 @use "./sass/header";
 @use "./sass/bio";

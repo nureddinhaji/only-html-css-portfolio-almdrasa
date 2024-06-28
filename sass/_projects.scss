@@ -1,3 +1,4 @@
+@use "./variables" as *;
 .projects__project {
     position: relative;
     display: flex;
@@ -10,7 +11,7 @@
     position: relative;
     border-radius: 4rem;
     overflow: hidden;
-    transition: var(--transition-timing);
+    transition: $transition-timing;
     aspect-ratio: 4/3;
 }
 .projects__cover:hover {
@@ -25,7 +26,7 @@
     inset-inline-start: 0;
     background-color: var(--color-green);
     opacity: 0.4;
-    transition: var(--transition-timing);
+    transition: $transition-timing;
 }
 .projects__cover:hover::before {
     opacity: 0;
@@ -43,7 +44,7 @@
     border-radius: 4rem;
     flex: 1;
     z-index: 1;
-    transition: var(--transition-timing);
+    transition: $transition-timing;
 }
 .projects__details:hover {
     transform: scale(1.05);
@@ -57,8 +58,8 @@
 }
 .projects__title {
     font-size: 3.5rem;
-    font-weight: var(--font-weight-semi-bold);
-    transition: color var(--transition-timing);
+    font-weight: $semi-bold;
+    transition: color $transition-timing;
 }
 .projects__details:hover .projects__title {
     color: var(--color-dark-green);
@@ -66,6 +67,7 @@
 .projects__description {
     font-size: 2rem;
     line-height: 1.6;
+    font-family: $poppins;
 }
 .projects__links {
     display: flex;
@@ -75,12 +77,12 @@
 
 .projects__link {
     font-size: 2rem;
-    font-weight: var(--font-weight-medium);
+    font-weight: $medium;
     padding: 1rem 2.5rem;
     background-color: var(--color-green);
     border-radius: 1rem;
     cursor: pointer;
-    transition: var(--transition-timing);
+    transition: $transition-timing;
     opacity: 0.8;
 }
 .projects__link:hover {

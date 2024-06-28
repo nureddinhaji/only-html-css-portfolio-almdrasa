@@ -1,3 +1,4 @@
+@use "./variables" as *;
 .skills__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -11,7 +12,7 @@
     padding: 20px;
     background-color: #b9b9b94a;
     border-radius: 1.5rem;
-    transition: var(--transition-timing);
+    transition: $transition-timing;
     user-select: none;
 }
 
@@ -20,7 +21,7 @@
 }
 .skills__title {
     font-size: 3.8rem;
-    font-weight: var(--font-weight-semi-bold);
+    font-weight: $semi-bold;
 }
 .skills__expertience {
     display: inline-block;

@@ -1,3 +1,4 @@
+@use "./variables" as *;
 .bio {
     min-height: calc(100vh - 8rem);
     display: flex;
@@ -10,33 +11,33 @@
 }
 .bio__heading {
     font-size: 7rem;
-    font-weight: var(--font-weight-bold);
+    font-weight: $bold;
 }
 .bio__details {
-    font-family: var(--font-family-poppins);
-    font-weight: var(--font-weight-regular);
+    font-family: $poppins;
+    font-weight: $regular;
     font-size: 2rem;
     margin: 3rem 0 8rem;
 }
 
 .bio__name {
-    font-weight: var(--font-weight-semi-bold);
+    font-weight: $semi-bold;
 }
 
 .bio__facebook {
-    color: var(--color-dark-blue);
+    color: $dark-blue;
 }
 
 .bio__twitter {
-    color: var(--color-light-blue);
+    color: $light-blue;
 }
 
 .bio__linkedin {
-    color: var(--color-dark-blue);
+    color: $dark-blue;
 }
 
 .bio__telegram {
-    color: var(--color-dark-blue);
+    color: $dark-blue;
 }
 .bio__links {
     display: flex;
@@ -44,7 +45,7 @@
 }
 .bio__link {
     font-size: 2.4rem;
-    font-weight: var(--font-weight-semi-bold);
+    font-weight: $semi-bold;
 }
 
 .bio__link--say-hi {
