@@ -1,0 +1,172 @@
+.carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    overflow: hidden;
+}
+@keyframes change-slide {
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+    40%,
+    60% {
+        transform: translateX(calc(-100% - 1rem));
+    }
+    80%,
+    100% {
+        transform: translateX(calc(-200% - 2rem));
+    }
+}
+@keyframes nav1 {
+    0%,
+    20% {
+        opacity: 1;
+    }
+    40%,
+    60% {
+        opacity: 0.5;
+    }
+    80%,
+    100% {
+        opacity: 0.5;
+    }
+}
+@keyframes nav2 {
+    0%,
+    20% {
+        opacity: 0.5;
+    }
+    40%,
+    60% {
+        opacity: 1;
+    }
+    80%,
+    100% {
+        opacity: 0.5;
+    }
+}
+@keyframes nav3 {
+    0%,
+    20% {
+        opacity: 0.5;
+    }
+    40%,
+    60% {
+        opacity: 0.5;
+    }
+    80%,
+    100% {
+        opacity: 1;
+    }
+}
+.clients__comments {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    animation-name: change-slide;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+.clients__comments .clients__comment:nth-child(1) {
+    background-color: #92d1d94a;
+}
+.clients__comments .clients__comment:nth-child(2) {
+    background-color: #d992994a;
+}
+.clients__comments .clients__comment:nth-child(3) {
+    background-color: #c5d9924a;
+}
+.clients__comment {
+    flex: 1 0 100%;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.clients__comment-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.carousel__image {
+    width: 100%;
+    border-radius: 1rem;
+}
+.clients__comment-body {
+    font-size: 2rem;
+    line-height: 1.7;
+}
+.carousel__control {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.carousel__nav {
+    width: 3rem;
+    height: 0.75rem;
+    display: inline-block;
+    background-color: var(--color-dark-green);
+    border-radius: 25px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#carousel__nav1 {
+    animation-name: nav1;
+}
+#carousel__nav2 {
+    animation-name: nav2;
+}
+#carousel__nav3 {
+    animation-name: nav3;
+}
+.carousel__nav {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+.carousel__btn:checked ~ .carousel .clients__comments,
+.carousel__btn:checked ~ .carousel .carousel__nav {
+    animation: none;
+}
+.carousel__nav:hover,
+#carousel__btn1:checked ~ .carousel #carousel__nav1,
+#carousel__btn2:checked ~ .carousel #carousel__nav2,
+#carousel__btn3:checked ~ .carousel #carousel__nav3 {
+    opacity: 1;
+}
+#carousel__btn1:checked ~ .carousel .clients__comments {
+    transform: translateX(0);
+}
+#carousel__btn2:checked ~ .carousel .clients__comments {
+    transform: translateX(calc(-100% - 1rem));
+}
+#carousel__btn3:checked ~ .carousel .clients__comments {
+    transform: translateX(calc(-200% - 2rem));
+}
+
+.clients__details {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+.clients__avatar {
+    width: 60px;
+}
+.clients__bio {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.clients__name {
+    font-weight: var(--font-weight-semi-bold);
+}

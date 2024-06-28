@@ -1,0 +1,82 @@
+.bio {
+    min-height: calc(100vh - 8rem);
+    display: flex;
+    align-items: center;
+}
+.bio__container {
+    gap: 7.4rem;
+    align-items: center;
+    height: 100%;
+}
+.bio__heading {
+    font-size: 7rem;
+    font-weight: var(--font-weight-bold);
+}
+.bio__details {
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-regular);
+    font-size: 2rem;
+    margin: 3rem 0 8rem;
+}
+
+.bio__name {
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.bio__facebook {
+    color: var(--color-dark-blue);
+}
+
+.bio__twitter {
+    color: var(--color-light-blue);
+}
+
+.bio__linkedin {
+    color: var(--color-dark-blue);
+}
+
+.bio__telegram {
+    color: var(--color-dark-blue);
+}
+.bio__links {
+    display: flex;
+    gap: 2rem;
+}
+.bio__link {
+    font-size: 2.4rem;
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.bio__link--say-hi {
+    background-color: var(--color-text);
+    color: var(--color-background);
+    padding: 0.7rem 4.7rem;
+}
+
+.bio__link--download {
+    padding: 0.7rem 0;
+}
+
+@keyframes arrow-animation {
+    0% {
+        transform: translateY(0.5rem);
+    }
+    35% {
+        transform: translateY(-0.5rem);
+    }
+    70% {
+        transform: translateY(0rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+.bio__arrow {
+    display: inline-block;
+    animation: arrow-animation 1s infinite alternate ease-in-out;
+}
+
+.bio__avatar {
+    width: 42.7rem;
+}

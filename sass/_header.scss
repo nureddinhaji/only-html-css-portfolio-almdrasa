@@ -1,0 +1,105 @@
+.header {
+    padding: 3rem 0;
+    font-weight: var(--font-weight-medium);
+    position: sticky;
+    border-bottom: 0.1rem solid var(--color-input-border);
+    background-color: var(--color-background);
+    top: 0;
+    z-index: 2;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+}
+.burger-menu {
+    display: none;
+    gap: 0.85rem;
+    cursor: pointer;
+}
+.burger-menu__line {
+    width: 4.5rem;
+    height: 0.3rem;
+    display: inline-block;
+    background-color: var(--color-text);
+    transition: var(--transition-timing);
+}
+.header:has(.burger-menu__input:checked) .burger-menu__line:nth-of-type(1) {
+    transform: translateY(10px) rotate(40deg);
+}
+.header:has(.burger-menu__input:checked) .burger-menu__line:nth-of-type(2) {
+    opacity: 0;
+    visibility: none;
+}
+.header:has(.burger-menu__input:checked) .burger-menu__line:nth-of-type(3) {
+    transform: translateY(-7px) rotate(-40deg);
+}
+.navigation__links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+    transition: var(--transition-timing);
+}
+.navigation__link:hover,
+.navigation__link:active {
+    text-decoration: underline;
+    color: var(--color-green);
+}
+
+body:has(#bio:target) .navigation__bio,
+body:has(#skills:target) .navigation__skills,
+body:has(#projects:target) .navigation__projects,
+body:has(#clients:target) .navigation__clients,
+body:has(#contact:target) .navigation__contact {
+    color: var(--color-dark-green);
+    font-weight: var(--font-weight-bold);
+    text-decoration: underline;
+}
+
+.toggle {
+    display: flex;
+    gap: 1rem;
+}
+
+.toggle__title {
+    font-weight: var(--font-weight-medium);
+    font-size: 1.8rem;
+}
+
+.toggle__input {
+    display: none;
+}
+
+.toggle__label {
+    width: 4.5rem;
+    height: 2.2rem;
+    background-color: var(--color-black);
+    transition: 0.3s;
+    border-radius: 1.5rem;
+    position: relative;
+    display: block;
+    padding: 0.3rem 0.4rem;
+    cursor: pointer;
+}
+
+.toggle__label::after {
+    content: "";
+    background-color: var(--color-white);
+    border-radius: 50%;
+    transition: 0.3s;
+    width: 1.6rem;
+    height: 1.6rem;
+    display: block;
+}
+
+.toggle__input:checked + .toggle__label {
+    background-color: var(--color-white);
+}
+
+.toggle__input:checked + .toggle__label::after {
+    background-color: var(--color-black);
+    transform: translateX(2.1rem);
+}
