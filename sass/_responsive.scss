@@ -41,6 +41,9 @@
     .container--grid-2col {
         grid-template-columns: 1fr;
     }
+    .bio__container {
+        text-align: center;
+    }
     .bio__image {
         grid-row: 1;
         display: flex;
@@ -49,7 +52,9 @@
     .bio__avatar {
         width: 75%;
     }
-
+    .bio__links {
+        justify-content: center;
+    }
     .skills__list {
         grid-template-columns: repeat(2, 1fr);
     }
