@@ -1,63 +1,52 @@
 @use "./variables" as *;
+@use "./mixins" as *;
+
 .bio {
     min-height: calc(100vh - 8rem);
-    display: flex;
-    align-items: center;
-}
-.bio__container {
-    gap: 7.4rem;
-    align-items: center;
-    height: 100%;
-}
-.bio__heading {
-    font-size: 7rem;
-    font-weight: $bold;
-}
-.bio__details {
-    font: {
-        family: $poppins;
-        weight: $regular;
-        size: 2rem;
+    @include flex-center;
+
+    &__container {
+        gap: 7.4rem;
+        align-items: center;
+        height: 100%;
     }
-    margin: 3rem 0 8rem;
-}
+    &__heading {
+        @include font(7rem, $bold);
+    }
+    &__details {
+        @include p-font;
+        margin: 3rem 0 8rem;
+    }
 
-.bio__name {
-    font-weight: $semi-bold;
-}
+    &__name {
+        @include font($w:$semi-bold);
+    }
 
-.bio__facebook {
-    color: $dark-blue;
-}
-
-.bio__twitter {
-    color: $light-blue;
-}
-
-.bio__linkedin {
-    color: $dark-blue;
-}
-
-.bio__telegram {
-    color: $dark-blue;
-}
-.bio__links {
-    display: flex;
-    gap: 2rem;
-}
-.bio__link {
-    font-size: 2.4rem;
-    font-weight: $semi-bold;
-}
-
-.bio__link--say-hi {
-    background-color: var(--color-text);
-    color: var(--color-background);
-    padding: 0.7rem 4.7rem;
-}
-
-.bio__link--download {
-    padding: 0.7rem 0;
+    &__social {
+        color: $dark-blue;
+        font-weight: $semi-bold;
+    }
+    &__links {
+        @include flex($g:2rem);
+    }
+    &__link {
+        @include font(2.4rem,$semi-bold);
+        &--say-hi {
+            background-color: var(--color-text);
+            color: var(--color-background);
+            padding: 0.7rem 4.7rem;
+        }
+        &--download {
+            padding: 0.7rem 0;
+        }
+    }
+    &__arrow {
+        display: inline-block;
+        animation: arrow-animation 1s infinite alternate ease-in-out;
+    }
+    &__avatar {
+        width: 42.7rem;
+    }
 }
 
 @keyframes arrow-animation {
@@ -73,13 +62,4 @@
     100% {
         transform: translateY(0rem);
     }
-}
-
-.bio__arrow {
-    display: inline-block;
-    animation: arrow-animation 1s infinite alternate ease-in-out;
-}
-
-.bio__avatar {
-    width: 42.7rem;
 }

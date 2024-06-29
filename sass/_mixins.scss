@@ -1,0 +1,50 @@
+@use "./variables" as *;
+
+// Paragraph Fonts
+@mixin p-font {
+    font-family: $poppins;
+    font-weight: $regular;
+    font-size: $p-font-size;
+    line-height: $p-line-height;
+}
+
+// Font Mixin
+@mixin font($s:null,$w:null) {
+    font-size: $s;
+    font-weight: $w;
+}
+
+// Flex Mixin
+@mixin flex-center($gap: null) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+// Flex Mixin
+@mixin flex($direction: null, $g: null, $jus-c: null, $align-i: null) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $g;
+    justify-content: $jus-c;
+    align-items: $align-i;
+}
+
+// Carousel Navigation Keyframe
+@mixin nav($name, $op1, $op2, $op3) {
+    @keyframes #{$name} {
+        0%,
+        20% {
+            opacity: $op1;
+        }
+        40%,
+        60% {
+            opacity: $op2;
+        }
+        80%,
+        100% {
+            opacity: $op3;
+        }
+    }
+}

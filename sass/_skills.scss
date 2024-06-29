@@ -1,4 +1,6 @@
 @use "./variables" as *;
+@use "./mixins" as *;
+
 .skills__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -6,9 +8,7 @@
     gap: 5rem;
 }
 .skills__item {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    @include flex($g:1rem, $jus-c:space-between);
     padding: 20px;
     background-color: #b9b9b94a;
     border-radius: 1.5rem;
@@ -20,17 +20,14 @@
     background: var(--color-green);
 }
 .skills__title {
-    font-size: 3.8rem;
-    font-weight: $semi-bold;
+    @include font(3.8rem, $semi-bold);
 }
 .skills__expertience {
     display: inline-block;
-    font-size: 2rem;
+    @include font(2rem);
 }
 .skills__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
 }
 .skills__svg {
     width: 55px;

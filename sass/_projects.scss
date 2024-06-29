@@ -1,4 +1,6 @@
 @use "./variables" as *;
+@use "./mixins" as *;
+
 .projects__project {
     position: relative;
     display: flex;
@@ -57,17 +59,14 @@
     margin-inline-end: -150px;
 }
 .projects__title {
-    font-size: 3.5rem;
-    font-weight: $semi-bold;
+    @include font(3.5rem,$semi-bold);
     transition: color $transition-timing;
 }
 .projects__details:hover .projects__title {
     color: var(--color-dark-green);
 }
 .projects__description {
-    font-size: 2rem;
-    line-height: 1.6;
-    font-family: $poppins;
+    @include p-font;
 }
 .projects__links {
     display: flex;
@@ -76,8 +75,7 @@
 }
 
 .projects__link {
-    font-size: 2rem;
-    font-weight: $medium;
+    @include font(2rem,$medium);
     padding: 1rem 2.5rem;
     background-color: var(--color-green);
     border-radius: 1rem;

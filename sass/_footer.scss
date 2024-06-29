@@ -1,12 +1,12 @@
 @use "./variables" as *;
 .footer {
     padding: 2rem 0;
-}
-.footer__content {
-    text-align: center;
-    font-weight: $medium;
-}
-.footer__name {
-    color: var(--color-dark-green);
-    font-weight: $bold;
+    &__content {
+        text-align: center;
+        font-weight: $medium;
+    }
+    &__name {
+        color: var(--color-dark-green);
+        font-weight: $bold;
+    }
 }
